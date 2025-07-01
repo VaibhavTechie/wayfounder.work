@@ -3,59 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vaibhav Rana | Data & Strategy</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Vaibhav Rana | Data Strategist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0d0f;
+      --fg: #ffffff;
+      --accent: #ff6a3d;
+      --muted: #aaaaaa;
+      --card-bg: #1b1b20;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: radial-gradient(circle at top left, #1a1f2e, #0d0d0f);
+      padding: 60px 10%;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.8em;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    header p {
+      max-width: 500px;
+      color: var(--muted);
+    }
+    .cta-button {
+      background-color: var(--accent);
+      color: #fff;
+      padding: 12px 26px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--accent);
+    }
+    .profile-pic {
+      border-radius: 50%;
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      box-shadow: 0 0 60px rgba(255, 106, 61, 0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .social-links {
+      position: absolute;
+      top: 20px;
+      right: 10%;
+    }
+    .social-links a {
+      color: var(--fg);
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .social-links a:hover {
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: var(--muted);
+      padding: 40px 10px;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>I turn data into strategy</h1>
-    <p>From business analytics to AI experimentation, I build insights that drive measurable change.</p>
-    <button id="toggle-theme">Toggle Light/Dark</button>
+  <header>
+    <div>
+      <h1>I turn data into strategy</h1>
+      <p>From business analytics to AI experimentation, I build insights that drive measurable change. Bridging engineering with business acumen.</p>
+      <button class="cta-button" onclick="location.href='mailto:vaibhav@wayfounder.work'">Get in Touch</button>
+    </div>
+    <img src="profile.jpeg" alt="Vaibhav Rana" class="profile-pic">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/vaibhav--rana/">LinkedIn</a>
+      <a href="https://github.com/VaibhavTechie">GitHub</a>
+      <a href="Vaibhav_Rana_Resume_2025.pdf">Download CV</a>
+    </div>
   </header>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#project">AI4EU Project</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section id="about">
+  <div class="container">
+    <section>
       <h2>About</h2>
-      <p>I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. I come from a background in electrical engineering and now focus on business analytics, automation, and digital strategy.</p>
-      <p>Beyond the CV: I value sharp thinking, hands-on execution, and the kind of momentum that turns insights into action. My projects blend strategy with execution—from Power BI dashboards to Python-driven ML pipelines.</p>
+      <div class="card">
+        <p>I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. My background in electrical engineering anchors my analytical approach in practicality and strategy.</p>
+      </div>
     </section>
 
-    <section id="certifications">
+    <section>
+      <h2>Key Skills</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Data Analysis:</strong> SQL, Excel, Tableau, Python</li>
+          <li><strong>AI & ML:</strong> Scikit-learn, TensorFlow, Jupyter</li>
+          <li><strong>Business Strategy:</strong> KPI Modeling, Reporting, Storytelling</li>
+          <li><strong>Dev & Ops:</strong> GitHub, Docker, REST APIs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
       <h2>Certifications</h2>
-      <ul>
-        <li><strong>IBM Business Intelligence Analyst</strong> – <a href="#">View Certificate</a></li>
-        <li><strong>IBM Data Science</strong> – <a href="#">View Certificate</a></li>
-        <li><strong>Excel Skills: Essentials</strong> – <a href="#">View Certificate</a></li>
-        <li><strong>Excel Skills: Intermediate I</strong> – <a href="#">View Certificate</a></li>
-      </ul>
+      <div class="card">
+        <p><strong>IBM Business Intelligence Analyst</strong> — SQL, Tableau, Excel, Cognos<br/><a href="./Coursera_PZM3SUJ3XNKD.pdf">View Certificate</a></p>
+      </div>
+      <div class="card">
+        <p><strong>IBM Data Science</strong> — Python, ML, Data Analysis<br/><a href="./Coursera_KA9437SQWMB3.pdf">View Certificate</a></p>
+      </div>
+      <div class="card">
+        <p><strong>Excel Skills: Essentials</strong> — Formulas, Charts, Tables<br/><a href="./Coursera_7M2V0KXPMSCR.pdf">View Certificate</a></p>
+      </div>
     </section>
 
-    <section id="project">
-      <h2>EU AI4EU Project — AI-Effect Orchestrator</h2>
-      <p><strong>Live BCP Project — Maynooth University (2025)</strong></p>
-      <ul>
-        <li>Automated multi-container execution with dependency resolution</li>
-        <li>Used Docker Compose for modular orchestration</li>
-        <li>Collaborated with stakeholders to align deliverables with strategic KPIs</li>
-      </ul>
+    <section>
+      <h2>AI4EU Project — AI-Effect Orchestrator</h2>
+      <div class="card">
+        <p><em>Live BCP Project — Maynooth University (2025)</em><br/>• Multi-container orchestration with Docker Compose<br/>• KPI dashboard alignment<br/>• Stakeholder collaboration</p>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Let's Talk</h2>
-      <p>Email: <a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a></p>
-      <p><a href="https://linkedin.com/in/..." target="_blank">LinkedIn</a> | <a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a> | <a href="/cv.pdf" target="_blank">Download CV</a></p>
+    <section>
+      <h2>What Others Say</h2>
+      <div class="card">
+        <blockquote>“”<br/><em>– Mentor at MU</em></blockquote>
+      </div>
     </section>
-  </main>
+  </div>
 
-  <script src="scripts.js"></script>
+  <footer>
+    &copy; 2025 Vaibhav Rana — Built with love and clean code.
+  </footer>
 </body>
 </html>
