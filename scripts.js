@@ -1,24 +1,15 @@
-// Scroll progress bar
-window.addEventListener('scroll', () => {
-  const prog = document.getElementById('progress-bar');
-  const percent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-  prog.style.width = percent + '%';
-});
+// script.js - Theme Toggle (Light/Dark)
 
-// Theme toggle
-document.getElementById('toggle-theme').addEventListener('click', () => {
-  document.documentElement.toggleAttribute('data-theme', 'light');
-});
+const toggleBtn = document.getElementById("theme-toggle");
 
-// Endorsement carousel auto-scroll
-const endorse = document.getElementById('endorsementCarousel');
-let idx = 0;
-setInterval(() => {
-  if (endorse) {
-    endorse.scrollTo({ left: idx * endorse.offsetWidth, behavior: 'smooth' });
-    idx = (idx + 1) % endorse.children.length;
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light-theme");
+
+  if (document.body.classList.contains("light-theme")) {
+    document.body.style.backgroundColor = "#ffffff";
+    document.body.style.color = "#111111";
+  } else {
+    document.body.style.backgroundColor = "#0f0f0f";
+    document.body.style.color = "#eaeaea";
   }
-}, 5000);
-
-// Initialize AOS animations
-AOS.init({ once: true, duration: 800 });
+});
