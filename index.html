@@ -27,13 +27,13 @@
         flex-direction: column;
         gap: 2rem;
       }
-      .quick-access, .about-section {
+      .quick-access, .about-section, .certifications-section {
         background: #1a1a1a;
         border-radius: 12px;
         padding: 1.5rem;
         box-shadow: 0 0 10px rgba(0, 255, 200, 0.1);
       }
-      .quick-access h2, .about-section h2 {
+      .quick-access h2, .about-section h2, .certifications-section h2 {
         margin-bottom: 1rem;
         color: #00f2a9;
         font-size: 1.25rem;
@@ -73,6 +73,24 @@
       .download-cv a:hover {
         background: #00e0a0;
       }
+      .certifications-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .cert-card {
+        background: #262626;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+      .cert-card a {
+        color: #00f2a9;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .cert-card a:hover {
+        text-decoration: underline;
+      }
       @media (min-width: 768px) {
         .container {
           flex-direction: row;
@@ -83,7 +101,7 @@
           top: 2rem;
           align-self: flex-start;
         }
-        .about-section {
+        .about-section, .certifications-section {
           width: 70%;
         }
       }
@@ -106,15 +124,43 @@
         </div>
       </aside>
 
-      <section class="about-section">
-        <h2>About</h2>
-        <p>
-          I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. I come from a background in electrical engineering and now focus on business analytics, automation, and digital strategy. Whether I'm forecasting trends, building dashboards, or aligning data with business goals — I’m driven by clarity, speed, and results.
-        </p>
-        <p style="margin-top: 1rem;">
-          Beyond the CV: I value sharp thinking, hands-on execution, and the kind of momentum that turns insights into decisions. My projects blend strategy with execution — from deploying dashboards in Power BI to integrating APIs and leveraging Python for machine learning use cases.
-        </p>
-      </section>
+      <main>
+        <section class="about-section">
+          <h2>About</h2>
+          <p>
+            I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. I come from a background in electrical engineering and now focus on business analytics, automation, and digital strategy. Whether I'm forecasting trends, building dashboards, or aligning data with business goals — I’m driven by clarity, speed, and results.
+          </p>
+          <p style="margin-top: 1rem;">
+            Beyond the CV: I value sharp thinking, hands-on execution, and the kind of momentum that turns insights into decisions. My projects blend strategy with execution — from deploying dashboards in Power BI to integrating APIs and leveraging Python for machine learning use cases.
+          </p>
+        </section>
+
+        <section class="certifications-section">
+          <h2>Certifications</h2>
+          <div class="certifications-list">
+            <div class="cert-card">
+              <strong>IBM Business Intelligence Analyst</strong><br />
+              10-course track: SQL, Tableau, Excel, Dashboards, Cognos<br />
+              <a href="https://coursera.org/verify/professional-cert/PZM3SUJ3XNKD" target="_blank">View Certificate</a>
+            </div>
+            <div class="cert-card">
+              <strong>IBM Data Science</strong><br />
+              Python, Machine Learning, Data Analysis, Capstone Projects<br />
+              <a href="https://coursera.org/verify/professional-cert/KA9437SQWMB3" target="_blank">View Certificate</a>
+            </div>
+            <div class="cert-card">
+              <strong>Excel Skills for Business: Essentials</strong><br />
+              Data cleaning, formulas, charts, functions<br />
+              <a href="https://coursera.org/verify/7M2V0KXPMSCR" target="_blank">View Certificate</a>
+            </div>
+            <div class="cert-card">
+              <strong>Excel Skills for Business: Intermediate I</strong><br />
+              Logical formulas, tables, and practical spreadsheet tasks<br />
+              <a href="https://coursera.org/verify/1LZZ9LVSRKMT" target="_blank">View Certificate</a>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
