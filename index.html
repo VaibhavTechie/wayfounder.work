@@ -1,113 +1,159 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vaibhav Rana — Business Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaibhav Rana | Data & Strategy</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0d0d0d;
+      color: #e6e6e6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background-color: #111;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #0ff;
+      margin-bottom: 0.5rem;
+    }
+    header h2 {
+      font-weight: 400;
+      color: #aaa;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background: #000;
+    }
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .container {
+      display: flex;
+      padding: 2rem;
+      gap: 2rem;
+    }
+    aside {
+      min-width: 200px;
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    aside h3 {
+      color: #0ff;
+      margin-bottom: 1rem;
+    }
+    aside a {
+      display: block;
+      color: #0ff;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+    }
+    main {
+      flex: 1;
+    }
+    section {
+      margin-bottom: 2rem;
+      background: #141414;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    section h3 {
+      color: #0ff;
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    .cert {
+      background: #222;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .download {
+      margin-top: 1rem;
+      display: inline-block;
+      background: #0ff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>I turn data into strategy</h1>
-      <p>From business analytics to AI experimentation, I build insights that drive measurable change.</p>
-      <button id="toggle-theme" class="btn">Toggle Light/Dark</button>
-    </div>
-    <nav class="sticky-nav">
-      <a href="#about">About</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#project">Project</a>
-      <a href="#contact">Contact</a>
-      <div id="progress-bar"></div>
-    </nav>
+  <header>
+    <h1>Vaibhav Rana</h1>
+    <h2>I turn data into strategy</h2>
   </header>
-
-  <main class="container">
-    <!-- SIDEBAR -->
-    <aside class="quick-access">
-      <h2>Quick Access</h2>
-      <a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a>
-      <a href="https://linkedin.com/in/vaibhavrana2025" target="_blank">LinkedIn</a>
-      <a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a>
-      <a class="btn download-cv" href="cv/Vaibhav_Rana_Resume_2025.pdf" download>Download CV</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#certs">Certifications</a>
+    <a href="#ai4eu">AI4EU Project</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="container">
+    <aside>
+      <h3>Quick Access</h3>
+      <a href="mailto:vaibhav@wayfounder.work">📧 vaibhav@wayfounder.work</a>
+      <a href="https://linkedin.com/in/vaibhavrana2025" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/VaibhavTechie" target="_blank">💻 GitHub</a>
+      <a class="download" href="cv/Vaibhav_Rana_Resume_2025.pdf" download>📄 Download CV</a>
     </aside>
-
-    <!-- MAIN CONTENT WRAPPER -->
-    <div class="content">
-      <section id="about" class="section zebra">
-        <h2>About</h2>
-        <p>I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. My background in electrical engineering anchors my analytical approach in practicality.</p>
-        <p>Beyond the CV: I value sharp thinking, hands-on execution, and the momentum that turns insights into action. My projects blend strategy with execution—from Power BI dashboards to Python-driven ML pipelines.</p>
+    <main>
+      <section id="about">
+        <h3>About</h3>
+        <p>
+          I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact.
+          My background in electrical engineering anchors my analytical approach in practicality.
+        </p>
+        <p>
+          Beyond the CV: I value sharp thinking, hands-on execution, and the momentum that turns insights into action.
+          My projects blend strategy with execution—from Power BI dashboards to Python-driven ML pipelines.
+        </p>
       </section>
 
-      <section id="certifications" class="section zebra-alt">
-        <h2>Certifications</h2>
-        <div class="card-list">
-          <div class="card">
-            <strong>IBM Business Intelligence Analyst</strong>
-            <p>SQL, Tableau, Excel, Cognos, Capstone</p>
-            <a href="https://coursera.org/verify/professional-cert/PZM3SUJ3XNKD" target="_blank">View Certificate</a>
-          </div>
-          <div class="card">
-            <strong>IBM Data Science</strong>
-            <p>Python, ML, Data Analysis, Visualization</p>
-            <a href="https://coursera.org/verify/professional-cert/KA9437SQWMB3" target="_blank">View Certificate</a>
-          </div>
-          <div class="card">
-            <strong>Excel Skills: Essentials</strong>
-            <p>Formulas, Charts, Tables</p>
-            <a href="https://coursera.org/verify/7M2V0KXPMSCR" target="_blank">View Certificate</a>
-          </div>
-          <div class="card">
-            <strong>Excel Skills: Intermediate I</strong>
-            <p>Data cleanup, Automation</p>
-            <a href="https://coursera.org/verify/1LZZ9LVSRKMT" target="_blank">View Certificate</a>
-          </div>
-        </div>
+      <section id="certs">
+        <h3>Certifications</h3>
+        <div class="cert"><strong>IBM Business Intelligence Analyst</strong><br><small>SQL, Tableau, Excel, Cognos</small></div>
+        <div class="cert"><strong>IBM Data Science</strong><br><small>Python, ML, Data Analysis</small></div>
+        <div class="cert"><strong>Excel Skills: Essentials</strong><br><small>Formulas, Charts, Tables</small></div>
+        <div class="cert"><strong>Excel Skills: Intermediate I</strong><br><small>Data Cleanup, Automation</small></div>
       </section>
 
-      <section id="project" class="section zebra">
-        <h2>EU AI4EU Project — AI-Effect Orchestrator</h2>
-        <p><strong>Live BCP Project — Maynooth University (2025)</strong></p>
+      <section id="ai4eu">
+        <h3>EU AI4EU Project — AI-Effect Orchestrator</h3>
+        <p><em>Live BCP Project — Maynooth University (2025)</em></p>
         <ul>
-          <li>🔄 Automated multi-container execution with dependency resolution</li>
-          <li>🐳 Docker Compose orchestration with structured logging</li>
-          <li>📁 Modular codebase: src/, config/, logs/, tests/</li>
-          <li>📄 Async-ready architecture for scaling</li>
-          <li>🤝 Collaboration with EU WP3.2 stakeholders</li>
+          <li>Automated multi-container execution with dependency resolution</li>
+          <li>Docker-Compose orchestration with structured logging</li>
+          <li>Modular architecture: src/, config/, logs/, tests/</li>
+          <li>Async-ready for future scale</li>
         </ul>
-        <a class="btn" href="pdf/WP_3.2_Orchestrator_Documentation.pdf" download>Download Project Brief</a>
+        <a class="download" href="pdf/WP_3.2_Orchestrator_Documentation.pdf" download>📥 Download Project Brief</a>
       </section>
 
-      <section class="section zebra-alt endorsements">
-        <h2>Testimonials</h2>
-        <div class="carousel" id="endorsementCarousel">
-          <div class="slide">“Vaibhav brings clarity and precision to analytics discussions.” — Mentor</div>
-          <div class="slide">“His dashboards turned data into decisions for our team.” — Professor</div>
-        </div>
+      <section id="contact">
+        <h3>Contact</h3>
+        <p>📨 <a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a></p>
       </section>
-
-      <section class="section zebra live-widget">
-        <h2>Live Dashboard</h2>
-        <iframe src="https://public.tableau.com/views/YourDashboard" loading="lazy"></iframe>
-      </section>
-
-      <section id="contact" class="section zebra-alt contact-cta">
-        <h2>Let’s Talk</h2>
-        <a class="btn" href="mailto:vaibhav@wayfounder.work">Email Me</a>
-        <a class="btn" href="https://calendly.com/vaibhavrana" target="_blank">Book a Call</a>
-      </section>
-    </div>
-  </main>
-
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="scripts.js"></script>
-  <script>
-    feather.replace();
-    AOS.init({ once: true, duration: 800 });
-  </script>
+    </main>
+  </div>
 </body>
 </html>
