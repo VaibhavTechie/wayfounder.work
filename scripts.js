@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleBtn = document.getElementById("theme-toggle");
-  toggleBtn.addEventListener("click", function () {
-    document.body.classList.toggle("light");
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("toggle").addEventListener("click", () => {
+    document.body.style.background = document.body.style.background === 'black' ? 'white' : 'black';
+    document.body.style.color = document.body.style.color === 'white' ? 'black' : 'white';
   });
 });
