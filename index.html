@@ -1,158 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vaibhav Rana | Wayfounder</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
-      color: #f1f1f1;
-      padding: 2rem;
-      display: flex;
-      gap: 2rem;
-    }
-    aside {
-      position: sticky;
-      top: 2rem;
-      width: 240px;
-      background: #1a1a1a;
-      padding: 1.5rem;
-      border-radius: 1rem;
-      height: fit-content;
-      box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
-    }
-    aside h2 {
-      color: #00ffcc;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    aside p, aside a {
-      color: #ddd;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    aside a {
-      display: block;
-      margin-top: 1rem;
-      color: #00ffcc;
-      text-decoration: none;
-    }
-    aside a:hover {
-      text-decoration: underline;
-    }
-    main {
-      flex: 1;
-      max-width: 760px;
-    }
-    header {
-      text-align: left;
-      padding-top: 2rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #00ffcc;
-    }
-    header h2 {
-      font-size: 1.25rem;
-      margin-top: 0.5rem;
-      color: #ccc;
-    }
-    .contact-inline {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      color: #aaa;
-    }
-    .contact-inline a {
-      color: #00ffcc;
-      margin-right: 1rem;
-    }
-    .section {
-      background-color: #1a1a1a;
-      margin: 2.5rem 0;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
-    }
-    .section h2 {
-      color: #00ffcc;
-      margin-bottom: 1rem;
-    }
-    .section p, .section ul {
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
-    .section ul {
-      margin-top: 1rem;
-      padding-left: 1.25rem;
-    }
-    .section ul li::marker {
-      color: #00ffcc;
-    }
-    .footer {
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-      padding-bottom: 2rem;
-      margin-top: 4rem;
-    }
-  </style>
-</head>
-<body>
-  <aside>
-    <h2>Quick Access</h2>
-    <p>Email: <a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a></p>
-    <p><a href="https://linkedin.com/in/vaibhav--rana" target="_blank">LinkedIn</a></p>
-    <p><a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a></p>
-    <a href="/Vaibhav_Rana_Resume_2025.pdf" download>📄 Download CV</a>
-  </aside>
-
-  <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaibhav Rana — Business Analyst</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0d0d0d;
+        color: #e0e0e0;
+        line-height: 1.6;
+        padding: 1rem;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .quick-access, .about-section {
+        background: #1a1a1a;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 0 10px rgba(0, 255, 200, 0.1);
+      }
+      .quick-access h2, .about-section h2 {
+        margin-bottom: 1rem;
+        color: #00f2a9;
+        font-size: 1.25rem;
+      }
+      .quick-access a {
+        display: block;
+        color: #00f2a9;
+        text-decoration: none;
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+      }
+      .quick-access a:hover {
+        text-decoration: underline;
+      }
+      .name-title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #00f2a9;
+      }
+      .role-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #cfcfcf;
+        margin-top: 0.5rem;
+      }
+      .download-cv {
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+      .download-cv a {
+        background: #00f2a9;
+        color: #0d0d0d;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+      }
+      .download-cv a:hover {
+        background: #00e0a0;
+      }
+      @media (min-width: 768px) {
+        .container {
+          flex-direction: row;
+        }
+        .quick-access {
+          width: 30%;
+          position: sticky;
+          top: 2rem;
+          align-self: flex-start;
+        }
+        .about-section {
+          width: 70%;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <header>
-      <h1>Vaibhav Rana</h1>
-      <h2>MSc Business Analytics · Engineer · Problem Solver</h2>
-      <div class="contact-inline">
-        <a href="mailto:vaibhav@wayfounder.work">Email</a>
-        <a href="https://linkedin.com/in/vaibhav--rana" target="_blank">LinkedIn</a>
-        <a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a>
-      </div>
+      <div class="name-title">Vaibhav Rana</div>
+      <div class="role-title">MSc Business Analytics · Engineer · Problem Solver</div>
     </header>
 
-    <div class="section">
-      <h2>About</h2>
-      <p>
-        I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. I come from a background in electrical engineering and now focus on business analytics, automation, and digital strategy. Whether I’m forecasting trends or restructuring operations, I bring curiosity, clarity, and execution to the table. Outside the spreadsheet — I love PC building, going to the gym, and exploring tech that simplifies life.
-      </p>
-    </div>
+    <div class="container">
+      <aside class="quick-access">
+        <h2>Quick Access</h2>
+        <a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a>
+        <a href="https://www.linkedin.com/in/vaibhavrana2025" target="_blank">LinkedIn</a>
+        <a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a>
+        <div class="download-cv">
+          <a href="/cv/Vaibhav_Rana_Resume_2025.pdf" download>Download CV</a>
+        </div>
+      </aside>
 
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Falcon 9 Launch Predictor</strong> – Built a machine learning pipeline in Python using logistic regression to forecast successful launches based on historical telemetry data.</li>
-        <li><strong>Digital Twin Simulation</strong> – Developed a real-time system model for electrical operations to anticipate faults and optimize performance using predictive analytics.</li>
-        <li><strong>KPI Dashboard</strong> – Created an interactive Power BI dashboard tracking key performance indicators for a 1,200-student school, integrating automated reporting workflows.</li>
-        <li><strong>Workforce Scheduler at Costa</strong> – Designed a shift-scheduling template in Excel that improved coverage during peak hours based on footfall data.</li>
-      </ul>
+      <section class="about-section">
+        <h2>About</h2>
+        <p>
+          I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. I come from a background in electrical engineering and now focus on business analytics, automation, and digital strategy. Whether I'm forecasting trends, building dashboards, or aligning data with business goals — I’m driven by clarity, speed, and results.
+        </p>
+        <p style="margin-top: 1rem;">
+          Beyond the CV: I value sharp thinking, hands-on execution, and the kind of momentum that turns insights into decisions. My projects blend strategy with execution — from deploying dashboards in Power BI to integrating APIs and leveraging Python for machine learning use cases.
+        </p>
+      </section>
     </div>
-
-    <div class="section">
-      <h2>Beyond the CV</h2>
-      <p>
-        I believe that not everything that matters fits in a resume. I enjoy making processes smoother not just for business goals, but because friction-free systems make work more enjoyable. I like to explore automation tools, streamline workflows, and help others become more productive — whether through data or design. People I’ve worked with say I bring calm energy and thoughtful execution to high-pressure situations.
-      </p>
-    </div>
-
-    <div class="footer">
-      &copy; 2025 Wayfounder. All rights reserved.
-    </div>
-  </main>
-</body>
+  </body>
 </html>
