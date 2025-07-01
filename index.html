@@ -3,88 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vaibhav Rana — Portfolio</title>
+  <title>Vaibhav Rana | Data & Strategy</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Vaibhav Rana</h1>
-    <p>MSc Business Analytics · Engineer · Problem Solver</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#project">AI4EU Project</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="hero">
+    <h1>I turn data into strategy</h1>
+    <p>From business analytics to AI experimentation, I build insights that drive measurable change.</p>
+    <button id="toggleMode">Toggle Light/Dark</button>
   </header>
 
-  <aside>
-    <div class="quick-access">
-      <h2>Quick Access</h2>
-      <p><a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a></p>
-      <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-      <p><a href="https://github.com">GitHub</a></p>
-      <a href="Vaibhav_Rana_CV.pdf" class="btn">Download CV</a>
-    </div>
-  </aside>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#project">AI4EU Project</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. I come from a background in electrical engineering and now focus on business analytics, automation, and digital strategy.
-      </p>
-      <p>
-        Beyond the CV: I value sharp thinking, hands-on execution, and the kind of momentum that turns insights into decisions. My projects blend strategy with execution — from deploying dashboards in Power BI to integrating APIs and leveraging Python for machine learning use cases.
-      </p>
-    </section>
-
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <div class="cert">
-        <h3>IBM Business Intelligence Analyst</h3>
-        <p>SQL, Tableau, Excel, Cognos, Capstone</p>
-        <a href="COURSE_LINK">View Certificate</a>
-      </div>
-      <div class="cert">
-        <h3>IBM Data Science</h3>
-        <p>Python, ML, Data Analysis, Visualization</p>
-        <a href="COURSE_LINK">View Certificate</a>
-      </div>
-      <div class="cert">
-        <h3>Excel Skills: Essentials</h3>
-        <p>Formulas, Charts, Tables</p>
-        <a href="COURSE_LINK">View Certificate</a>
-      </div>
-      <div class="cert">
-        <h3>Excel Skills: Intermediate I</h3>
-        <p>Data cleanup, tables, automation</p>
-        <a href="COURSE_LINK">View Certificate</a>
-      </div>
-    </section>
-
-    <section id="project">
-      <h2>EU AI4EU Project — AI-Effect Orchestrator</h2>
-      <h4>Live BCP Project — Maynooth University (2025)</h4>
-      <p>
-        Developed a containerized Python-based orchestrator under the AI-Effect stream of the EU-funded AI4EU initiative.
-      </p>
+  <main class="container">
+    <aside class="sidebar">
+      <h3>Quick Access</h3>
       <ul>
-        <li>Automated multi-container execution with dependency resolution</li>
-        <li>Docker orchestration logic (Python-based)</li>
-        <li>Integrated config.yaml & .env pipelines</li>
+        <li><a href="mailto:vaibhav@wayfounder.work">📧 Email</a></li>
+        <li><a href="https://www.linkedin.com/in/vaibhavtechie" target="_blank">🔗 LinkedIn</a></li>
+        <li><a href="https://github.com/VaibhavTechie" target="_blank">💻 GitHub</a></li>
+        <li><a href="Vaibhav_Rana_CV.pdf" download>📄 Download CV</a></li>
       </ul>
-    </section>
+    </aside>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a></p>
-      <p>Feel free to reach out or connect on LinkedIn to discuss opportunities, projects, or collaborations.</p>
+    <section class="content">
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact.
+          My background in electrical engineering anchors my analytical approach in practicality.
+        </p>
+        <p>
+          Beyond the CV: I value sharp thinking, hands-on execution, and the momentum that turns insights into action.
+          My projects blend strategy with execution—from Power BI dashboards to Python-driven ML pipelines.
+        </p>
+      </section>
+
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="card">
+          <strong>IBM Business Intelligence Analyst</strong>
+          <p>SQL, Tableau, Excel, Cognos</p>
+          <a href="https://coursera.org/verify/KA9437SQWMB3" target="_blank">View Certificate</a>
+        </div>
+        <div class="card">
+          <strong>IBM Data Science</strong>
+          <p>Python, ML, Data Analysis</p>
+          <a href="https://coursera.org/verify/7M2V0KXPMSCR" target="_blank">View Certificate</a>
+        </div>
+        <div class="card">
+          <strong>Excel Skills: Essentials</strong>
+          <p>Formulas, Charts, Tables</p>
+          <a href="https://coursera.org/verify/1LZZ9LVSRKMT" target="_blank">View Certificate</a>
+        </div>
+        <div class="card">
+          <strong>Excel Skills: Intermediate I</strong>
+          <p>Data Cleanup, Automation</p>
+          <a href="https://coursera.org/verify/PZM3SUJ3XNKD" target="_blank">View Certificate</a>
+        </div>
+      </section>
+
+      <section id="project">
+        <h2>EU AI4EU Project — AI-Effect Orchestrator</h2>
+        <p><em>Live BCP Project — Maynooth University (2025)</em></p>
+        <ul>
+          <li>
+            Developed a containerized Python-based orchestrator under the AI-Effect stream of the EU-funded AI4EU initiative.
+          </li>
+          <li>
+            Automated multi-container execution with dependency resolution
+          </li>
+          <li>
+            Used Docker, shell scripting, and cloud-based CI/CD
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: vaibhav@wayfounder.work</p>
+        <p>Let’s connect or schedule a quick chat to discuss how I can bring value to your team!</p>
+      </section>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Vaibhav Rana · All Rights Reserved</p>
-  </footer>
 </body>
 </html>
