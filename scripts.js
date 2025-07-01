@@ -1,6 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("toggle").addEventListener("click", () => {
-    document.body.style.background = document.body.style.background === 'black' ? 'white' : 'black';
-    document.body.style.color = document.body.style.color === 'white' ? 'black' : 'white';
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("toggle-theme");
+  const currentTheme = localStorage.getItem("theme");
+
+  if (currentTheme === "light") {
+    document.body.classList.add("light");
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+    const isLight = document.body.classList.contains("light");
+    localStorage.setItem("theme", isLight ? "light" : "dark");
   });
 });
