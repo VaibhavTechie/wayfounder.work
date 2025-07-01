@@ -1,5 +1,128 @@
+/* Global Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #00d2ff;
+  --secondary-color: #3a7bd5;
+  --text-color: #fff;
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --accent: #6c63ff;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #1e1e1e;
+  --card-bg: #f5f5f5;
+}
+
 body {
-  background: black;
-  color: white;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-bottom: 4rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #000;
+  padding: 3rem 1rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #000;
+}
+
+button#toggle-theme {
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#toggle-theme:hover {
+  background-color: #222;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  font-weight: 500;
+}
+
+nav a {
+  color: var(--text-color);
+}
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+.cert-card {
+  margin-bottom: 1rem;
+}
+
+/* Quick Access + Contact */
+#contact {
+  margin-top: 3rem;
+}
+
+#contact p,
+#contact a {
+  margin-bottom: 0.4rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #999;
+  font-size: 0.85rem;
 }
