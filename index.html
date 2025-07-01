@@ -31,6 +31,7 @@
       background: radial-gradient(circle at top left, #1a1f2e, #0d0d0f);
       padding: 60px 10%;
       position: relative;
+      flex-wrap: wrap;
     }
     header h1 {
       font-size: 2.8em;
@@ -79,15 +80,18 @@
       color: var(--accent);
     }
     .card {
-      background: var(--card-bg);
-      border-radius: 10px;
+      background: rgba(27, 27, 32, 0.7);
+      border-radius: 16px;
       padding: 20px;
       margin-top: 20px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-      transition: transform 0.3s;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
     .card a {
       color: var(--accent);
@@ -107,11 +111,42 @@
     .social-links a:hover {
       color: var(--accent);
     }
+    .cert-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .cert-grid .card {
+      flex: 1 1 45%;
+    }
     footer {
       text-align: center;
       font-size: 0.9em;
       color: var(--muted);
       padding: 40px 10px;
+    }
+    @media (max-width: 768px) {
+      .social-links {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+        padding-top: 20px;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+      .profile-pic {
+        width: 160px;
+        height: 160px;
+        margin-top: 20px;
+      }
+      .cert-grid {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -134,7 +169,7 @@
     <section>
       <h2>About</h2>
       <div class="card">
-        <p>I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. My background in electrical engineering anchors my analytical approach in practicality and strategy.</p>
+        <p>I am a data-driven business analyst and technology consultant with hands-on experience in AI orchestration, data science, and full-stack automation...</p>
       </div>
     </section>
 
@@ -152,28 +187,23 @@
 
     <section>
       <h2>Certifications</h2>
-      <div class="card">
-        <p><strong>IBM Business Intelligence Analyst</strong> — SQL, Tableau, Excel, Cognos<br/><a href="./Coursera_PZM3SUJ3XNKD.pdf">View Certificate</a></p>
-      </div>
-      <div class="card">
-        <p><strong>IBM Data Science</strong> — Python, ML, Data Analysis<br/><a href="./Coursera_KA9437SQWMB3.pdf">View Certificate</a></p>
-      </div>
-      <div class="card">
-        <p><strong>Excel Skills: Essentials</strong> — Formulas, Charts, Tables<br/><a href="./Coursera_7M2V0KXPMSCR.pdf">View Certificate</a></p>
-      </div>
-    </section>
-
-    <section>
-      <h2>AI4EU Project — AI-Effect Orchestrator</h2>
-      <div class="card">
-        <p><em>Live BCP Project — Maynooth University (2025)</em><br/>• Multi-container orchestration with Docker Compose<br/>• KPI dashboard alignment<br/>• Stakeholder collaboration</p>
+      <div class="cert-grid">
+        <div class="card">
+          <p><strong>IBM Business Intelligence Analyst</strong><br/>SQL, Tableau, Excel, Cognos<br/><a href="./Coursera_PZM3SUJ3XNKD.pdf">View Certificate</a></p>
+        </div>
+        <div class="card">
+          <p><strong>IBM Data Science</strong><br/>Python, ML, Data Analysis<br/><a href="./Coursera_KA9437SQWMB3.pdf">View Certificate</a></p>
+        </div>
+        <div class="card">
+          <p><strong>Excel Skills: Essentials</strong><br/>Formulas, Charts, Tables<br/><a href="./Coursera_7M2V0KXPMSCR.pdf">View Certificate</a></p>
+        </div>
       </div>
     </section>
 
     <section>
-      <h2>What Others Say</h2>
+      <h2>Projects</h2>
       <div class="card">
-        <blockquote>“”<br/><em>– Mentor at MU</em></blockquote>
+        <p><strong>AI4EU — AI-Effect Orchestrator</strong><br/><em>BCP Project @ Maynooth University (2025)</em><br/>• Multi-container orchestration with Docker Compose<br/>• KPI dashboard alignment<br/>• Stakeholder collaboration<br/><a href="https://github.com/VaibhavTechie/ai4eu-orchestrator">View on GitHub</a></p>
       </div>
     </section>
   </div>
