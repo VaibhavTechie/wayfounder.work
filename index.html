@@ -16,25 +16,68 @@
       background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
       color: #f1f1f1;
       padding: 2rem;
+      display: flex;
+      gap: 2rem;
+    }
+    aside {
+      position: sticky;
+      top: 2rem;
+      width: 240px;
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      height: fit-content;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    }
+    aside h2 {
+      color: #00ffcc;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    aside p, aside a {
+      color: #ddd;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    aside a {
+      display: block;
+      margin-top: 1rem;
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    aside a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      max-width: 760px;
     }
     header {
-      text-align: center;
-      padding-top: 4rem;
+      text-align: left;
+      padding-top: 2rem;
     }
     header h1 {
       font-size: 3rem;
       font-weight: 700;
       color: #00ffcc;
     }
-    header p {
+    header h2 {
       font-size: 1.25rem;
       margin-top: 0.5rem;
       color: #ccc;
     }
+    .contact-inline {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+    .contact-inline a {
+      color: #00ffcc;
+      margin-right: 1rem;
+    }
     .section {
-      max-width: 720px;
-      margin: 4rem auto;
       background-color: #1a1a1a;
+      margin: 2.5rem 0;
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
@@ -59,49 +102,57 @@
       color: #777;
       font-size: 0.9rem;
       padding-bottom: 2rem;
-    }
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Vaibhav Rana</h1>
-    <p>MSc Business Analytics · Engineer · Problem Solver</p>
-  </header>
-
-  <div class="section">
-    <h2>About</h2>
-    <p>
-      I combine engineering expertise with data analytics to design smarter, more efficient systems. Whether it's automating reports, optimizing workflows, or visualizing business insights — I focus on clarity, logic, and results.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Falcon 9 Launch Predictor</strong> – Logistic regression with Python to model launch probabilities</li>
-      <li><strong>Digital Twin Simulation</strong> – Predictive modeling for electrical systems in real time</li>
-      <li><strong>KPI Dashboard</strong> – Power BI dashboard for school admin performance analytics</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Contact</h2>
+  <aside>
+    <h2>Quick Access</h2>
     <p>Email: <a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a></p>
-    <p>
-      <a href="https://linkedin.com/in/vaibhav--rana" target="_blank">LinkedIn</a> · 
-      <a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a>
-    </p>
-  </div>
+    <p><a href="https://linkedin.com/in/vaibhav--rana" target="_blank">LinkedIn</a></p>
+    <p><a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a></p>
+    <a href="/Vaibhav_Rana_Resume_2025.pdf" download>📄 Download CV</a>
+  </aside>
 
-  <div class="footer">
-    &copy; 2025 Wayfounder. All rights reserved.
-  </div>
+  <main>
+    <header>
+      <h1>Vaibhav Rana</h1>
+      <h2>MSc Business Analytics · Engineer · Problem Solver</h2>
+      <div class="contact-inline">
+        <a href="mailto:vaibhav@wayfounder.work">Email</a>
+        <a href="https://linkedin.com/in/vaibhav--rana" target="_blank">LinkedIn</a>
+        <a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a>
+      </div>
+    </header>
+
+    <div class="section">
+      <h2>About</h2>
+      <p>
+        I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. I come from a background in electrical engineering and now focus on business analytics, automation, and digital strategy. Whether I’m forecasting trends or restructuring operations, I bring curiosity, clarity, and execution to the table. Outside the spreadsheet — I love PC building, going to the gym, and exploring tech that simplifies life.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Falcon 9 Launch Predictor</strong> – Built a machine learning pipeline in Python using logistic regression to forecast successful launches based on historical telemetry data.</li>
+        <li><strong>Digital Twin Simulation</strong> – Developed a real-time system model for electrical operations to anticipate faults and optimize performance using predictive analytics.</li>
+        <li><strong>KPI Dashboard</strong> – Created an interactive Power BI dashboard tracking key performance indicators for a 1,200-student school, integrating automated reporting workflows.</li>
+        <li><strong>Workforce Scheduler at Costa</strong> – Designed a shift-scheduling template in Excel that improved coverage during peak hours based on footfall data.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Beyond the CV</h2>
+      <p>
+        I believe that not everything that matters fits in a resume. I enjoy making processes smoother not just for business goals, but because friction-free systems make work more enjoyable. I like to explore automation tools, streamline workflows, and help others become more productive — whether through data or design. People I’ve worked with say I bring calm energy and thoughtful execution to high-pressure situations.
+      </p>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Wayfounder. All rights reserved.
+    </div>
+  </main>
 </body>
 </html>
