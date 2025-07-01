@@ -1,0 +1,22 @@
+/* Global Reset and Variables */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #0d0d0d; color: #e0e0e0; padding: 1rem; }
+header { text-align: center; margin-bottom: 2rem; }
+.name-title { font-size: 2rem; color: #00f2a9; }
+.role-title { font-size: 1.1rem; color: #cfcfcf; margin-top: 0.5rem; }
+
+/* Layout */
+.container { display: flex; flex-direction: column; gap: 2rem; }
+.quick-access, .about-section, .certifications-section, .project-section {
+  background: #1a1a1a; padding: 1.5rem; border-radius: 12px; box-shadow: 0 0 10px rgba(0,255,200,0.1);
+}
+.quick-access h2, .about-section h2, .certifications-section h2, .project-section h2 {
+  color: #00f2a9; margin-bottom: 1rem; font-size: 1.25rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .container { flex-direction: row; }
+  .quick-access { width: 30%; position: sticky; top: 2rem; }
+  .about-section, .certifications-section, .project-section { width: 70%; }
+}

@@ -1,166 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vaibhav Rana — Business Analyst</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0d0d0d;
-        color: #e0e0e0;
-        line-height: 1.6;
-        padding: 1rem;
-      }
-      header {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-      .container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
-      .quick-access, .about-section, .certifications-section {
-        background: #1a1a1a;
-        border-radius: 12px;
-        padding: 1.5rem;
-        box-shadow: 0 0 10px rgba(0, 255, 200, 0.1);
-      }
-      .quick-access h2, .about-section h2, .certifications-section h2 {
-        margin-bottom: 1rem;
-        color: #00f2a9;
-        font-size: 1.25rem;
-      }
-      .quick-access a {
-        display: block;
-        color: #00f2a9;
-        text-decoration: none;
-        margin-bottom: 0.75rem;
-        font-weight: 600;
-      }
-      .quick-access a:hover {
-        text-decoration: underline;
-      }
-      .name-title {
-        font-size: 2rem;
-        font-weight: 800;
-        color: #00f2a9;
-      }
-      .role-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #cfcfcf;
-        margin-top: 0.5rem;
-      }
-      .download-cv {
-        margin-top: 1rem;
-        font-weight: 600;
-      }
-      .download-cv a {
-        background: #00f2a9;
-        color: #0d0d0d;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        text-decoration: none;
-      }
-      .download-cv a:hover {
-        background: #00e0a0;
-      }
-      .certifications-list {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .cert-card {
-        background: #262626;
-        padding: 1rem;
-        border-radius: 8px;
-      }
-      .cert-card a {
-        color: #00f2a9;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .cert-card a:hover {
-        text-decoration: underline;
-      }
-      @media (min-width: 768px) {
-        .container {
-          flex-direction: row;
-        }
-        .quick-access {
-          width: 30%;
-          position: sticky;
-          top: 2rem;
-          align-self: flex-start;
-        }
-        .about-section, .certifications-section {
-          width: 70%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="name-title">Vaibhav Rana</div>
-      <div class="role-title">MSc Business Analytics · Engineer · Problem Solver</div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaibhav Rana — Business Analyst</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="name-title">Vaibhav Rana</div>
+    <div class="role-title">MSc Business Analytics · Engineer · Problem Solver</div>
+  </header>
 
-    <div class="container">
-      <aside class="quick-access">
-        <h2>Quick Access</h2>
-        <a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a>
-        <a href="https://www.linkedin.com/in/vaibhavrana2025" target="_blank">LinkedIn</a>
-        <a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a>
-        <div class="download-cv">
-          <a href="/cv/Vaibhav_Rana_Resume_2025.pdf" download>Download CV</a>
-        </div>
-      </aside>
+  <div class="container">
+    <aside class="quick-access">
+      <h2>Quick Access</h2>
+      <a href="mailto:vaibhav@wayfounder.work">vaibhav@wayfounder.work</a>
+      <a href="https://www.linkedin.com/in/vaibhavrana2025" target="_blank">LinkedIn</a>
+      <a href="https://github.com/VaibhavTechie" target="_blank">GitHub</a>
+      <div class="download-cv">
+        <a href="cv/Vaibhav_Rana_Resume_2025.pdf" download>Download CV</a>
+      </div>
+    </aside>
 
-      <main>
-        <section class="about-section">
-          <h2>About</h2>
-          <p>
-            I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact. I come from a background in electrical engineering and now focus on business analytics, automation, and digital strategy. Whether I'm forecasting trends, building dashboards, or aligning data with business goals — I’m driven by clarity, speed, and results.
-          </p>
-          <p style="margin-top: 1rem;">
-            Beyond the CV: I value sharp thinking, hands-on execution, and the kind of momentum that turns insights into decisions. My projects blend strategy with execution — from deploying dashboards in Power BI to integrating APIs and leveraging Python for machine learning use cases.
-          </p>
-        </section>
+    <main>
+      <section class="about-section">
+        <h2>About</h2>
+        <p>I'm a systems thinker who thrives at the intersection of technology, data, and real-world impact.</p>
+        <p>Beyond the CV: I value sharp thinking, hands-on execution, and momentum that turns insights into decisions.</p>
+      </section>
 
-        <section class="certifications-section">
-          <h2>Certifications</h2>
-          <div class="certifications-list">
-            <div class="cert-card">
-              <strong>IBM Business Intelligence Analyst</strong><br />
-              10-course track: SQL, Tableau, Excel, Dashboards, Cognos<br />
-              <a href="https://coursera.org/verify/professional-cert/PZM3SUJ3XNKD" target="_blank">View Certificate</a>
-            </div>
-            <div class="cert-card">
-              <strong>IBM Data Science</strong><br />
-              Python, Machine Learning, Data Analysis, Capstone Projects<br />
-              <a href="https://coursera.org/verify/professional-cert/KA9437SQWMB3" target="_blank">View Certificate</a>
-            </div>
-            <div class="cert-card">
-              <strong>Excel Skills for Business: Essentials</strong><br />
-              Data cleaning, formulas, charts, functions<br />
-              <a href="https://coursera.org/verify/7M2V0KXPMSCR" target="_blank">View Certificate</a>
-            </div>
-            <div class="cert-card">
-              <strong>Excel Skills for Business: Intermediate I</strong><br />
-              Logical formulas, tables, and practical spreadsheet tasks<br />
-              <a href="https://coursera.org/verify/1LZZ9LVSRKMT" target="_blank">View Certificate</a>
-            </div>
+      <section class="certifications-section">
+        <h2>Certifications</h2>
+        <div class="certifications-list">
+          <div class="cert-card">
+            <strong>IBM Business Intelligence Analyst</strong><br />
+            SQL, Tableau, Excel, Cognos<br />
+            <a href="https://coursera.org/verify/professional-cert/PZM3SUJ3XNKD" target="_blank">View Certificate</a>
           </div>
-        </section>
-      </main>
-    </div>
-  </body>
+          <div class="cert-card">
+            <strong>IBM Data Science</strong><br />
+            Python, ML, Data Analysis<br />
+            <a href="https://coursera.org/verify/professional-cert/KA9437SQWMB3" target="_blank">View Certificate</a>
+          </div>
+          <div class="cert-card">
+            <strong>Excel Skills: Essentials</strong><br />
+            Charts, tables, formulas<br />
+            <a href="https://coursera.org/verify/7M2V0KXPMSCR" target="_blank">View Certificate</a>
+          </div>
+          <div class="cert-card">
+            <strong>Excel Skills: Intermediate I</strong><br />
+            Data cleanup, automation<br />
+            <a href="https://coursera.org/verify/1LZZ9LVSRKMT" target="_blank">View Certificate</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>EU AI4EU Project — AI-Effect Orchestrator</h2>
+        <p><strong>Live BCP Project — Maynooth University (2025)</strong></p>
+        <ul>
+          <li>🔄 Automated multi-container execution</li>
+          <li>🐳 Docker/Compose orchestration</li>
+          <li>📁 Modular: src/, config/, logs/, tests/</li>
+          <li>📄 Structured logging, async-ready</li>
+          <li>🤝 EU WP3.2 stakeholder collaboration</li>
+        </ul>
+        <p><a href="pdf/WP_3.2_Orchestrator_Documentation.pdf" target="_blank">Download Project Brief</a></p>
+      </section>
+    </main>
+  </div>
+</body>
 </html>
