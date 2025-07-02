@@ -3,240 +3,312 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vaibhav Rana | Data Strategist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Vaibhav Rana | AI Portfolio</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
   <style>
-    :root {
-      --bg: #0d0d0f;
-      --fg: #ffffff;
-      --accent: #ff6a3d;
-      --muted: #aaaaaa;
-      --card-bg: #1b1b20;
-    }
-    * {
-      box-sizing: border-box;
+    html, body {
+      scroll-behavior: smooth;
       margin: 0;
       padding: 0;
+      background: #0b0f19;
+      color: #f1f5f9;
+      font-family: 'Segoe UI', sans-serif;
     }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
+    .glass {
+      background: rgba(255,255,255,0.05);
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: transform 0.4s ease, background 0.4s ease;
     }
-    header {
-      display: flex;
-      justify-content: space-between;
+    .glass:hover {
+      transform: scale(1.025);
+      background: rgba(255,255,255,0.12);
+    }
+    .skill-badge {
+      display: inline-flex;
       align-items: center;
-      background: radial-gradient(circle at top left, #1a1f2e, #0d0d0f);
-      padding: 60px 10%;
-      position: relative;
-      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.6rem 1.4rem;
+      margin: 0.4rem;
+      border-radius: 9999px;
+      background: rgba(255,255,255,0.05);
+      transition: transform 0.4s ease, background 0.4s ease;
     }
-    header h1 {
-      font-size: 2.8em;
-      font-weight: 800;
-      margin-bottom: 10px;
+    .skill-badge:hover {
+      transform: scale(1.1);
+      background: rgba(255,255,255,0.12);
     }
-    header p {
-      max-width: 500px;
-      color: var(--muted);
+    .icon-btn {
+      background: rgba(255,255,255,0.05);
+      padding: 0.75rem;
+      border-radius: 9999px;
+      transition: background-color 0.4s ease, transform 0.4s ease, color 0.4s ease;
+      font-size: 1.25rem;
+      color: inherit;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
-    .cta-button {
-      background-color: var(--accent);
-      color: #fff;
-      padding: 12px 26px;
-      font-weight: 600;
-      border: none;
-      border-radius: 8px;
-      margin-top: 20px;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .icon-btn:hover {
+      background: #22d3ee;
+      color: #000;
+      transform: scale(1.1);
     }
-    .cta-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px var(--accent);
+    .cert-img {
+      filter: grayscale(100%);
+      transition: transform 0.4s ease, filter 0.4s ease;
     }
-    .profile-pic {
-      border-radius: 50%;
-      width: 240px;
-      height: 240px;
-      object-fit: cover;
-      box-shadow: 0 0 60px rgba(255, 106, 61, 0.2);
-      animation: fadeIn 2s ease-in-out;
+    .cert-img:hover {
+      filter: none;
+      transform: scale(1.1);
     }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 30px;
-    }
-    h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      color: var(--accent);
-    }
-    .card {
-      background: rgba(27, 27, 32, 0.7);
-      border-radius: 16px;
-      padding: 20px;
-      margin-top: 20px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-    }
-    .card a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .social-links {
-      position: absolute;
-      top: 20px;
-      right: 10%;
-    }
-    .social-links a {
-      color: var(--fg);
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .social-links a:hover {
-      color: var(--accent);
-    }
-    .cert-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .cert-grid .card {
-      flex: 1 1 45%;
-    }
-    footer {
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #00d1d1;
+      margin-bottom: 1.5rem;
       text-align: center;
-      font-size: 0.9em;
-      color: var(--muted);
-      padding: 40px 10px;
     }
-    @media (max-width: 768px) {
-      .social-links {
-        position: static;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        gap: 20px;
-        padding-top: 20px;
-      }
-      header {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-      }
-      .profile-pic {
-        width: 160px;
-        height: 160px;
-        margin-top: 20px;
-      }
-      .cert-grid {
-        flex-direction: column;
-      }
+    .nav-dot {
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      background: rgba(255,255,255,0.4);
+      transition: background-color 0.3s, transform 0.3s;
     }
-    .card ul li {
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-.card ul {
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+    .nav-dot:hover {
+      background: rgba(34,211,238,0.8);
+      transform: scale(1.2);
+    }
+    .nav-dot.active {
+      background: #22d3ee;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div>
-      <h1>I turn data into strategy</h1>
-      <p>From business analytics to AI experimentation, I build insights that drive measurable change. Bridging engineering with business acumen.</p>
-      <button class="cta-button" onclick="location.href='mailto:vaibhav@wayfounder.work'">Get in Touch</button>
-    </div>
-    <img src="profile.jpeg" alt="Vaibhav Rana" class="profile-pic">
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/vaibhav--rana/">LinkedIn</a>
-      <a href="https://github.com/VaibhavTechie">GitHub</a>
-      <a href="Vaibhav_Rana_Resume_2025.pdf">Download CV</a>
-    </div>
-  </header>
 
-  <div class="container">
-    <section>
-  <h2>About</h2>
-  <div class="card">
-    <p>
-      I’m a results-driven data strategist with professional experience in SQL, advanced Excel, Power BI, and Python—turning complex data into actionable business insights. My journey spans leading cross-functional analytics projects at Optum and Champ Info, complemented by an MSc in Business Analytics from Maynooth University.
-    </p>
-    <p>
-      My standout achievements include designing containerized AI orchestration pipelines for the EU‑funded AI4EU project, and developing automated KPI dashboards and ETL workflows in production settings. Certified in IBM Data Science and Business Intelligence, I deliver both technical excellence and strategic impact.
-    </p>
-    <p>
-      Core strengths:
-    <ul>
-      <li>SQL querying & relational data modeling</li>
-      <li>Advanced Excel & Power BI dashboards</li>
-      <li>Python scripting + machine learning with scikit‑learn</li>
-      <li>ETL automation, KPI metrics design, stakeholder alignment</li>
-    </ul>
-    </p>
-    <p>
-      I’m actively seeking roles where I can leverage data analytics, automation, and strategy to drive measurable outcomes in sectors like software, retail, or automotive.
-    </p>
+  <!-- Hero -->
+  <section id="hero" class="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+    <div id="tsparticles" class="absolute inset-0 z-0"></div>
+    <div class="z-10 px-4 max-w-2xl">
+      <img src="profile.jpeg" alt="Vaibhav" class="w-32 h-32 mx-auto rounded-full border-4 border-cyan-400 mb-4" />
+      <h1 class="text-5xl font-bold mb-2" data-aos="fade-down">
+        Hi, I'm <span class="text-cyan-400">Vaibhav Rana</span>
+      </h1>
+      <p class="text-xl text-slate-300" data-aos="fade-up">
+        Engineer ➤ Data Analyst ➤ Data Strategist ➤ AI Enthusiast
+      </p>
+      <div class="flex justify-center gap-4 mt-6" data-aos="fade-up" data-aos-delay="400">
+        <a href="https://github.com/VaibhavTechie" class="icon-btn"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vaibhav--rana/" class="icon-btn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:vaibhav@wayfounder.work" class="icon-btn"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <a href="#about" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-cyan-400 text-4xl z-50 animate-bounce hover:text-cyan-200 transition duration-300">
+      <i class="fas fa-angle-double-down"></i>
+    </a>
+  </section>
+
+  <!-- About -->
+<section id="about" class="py-20 px-6 bg-[#0d1119]" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="section-title">About Me</h2>
+    <div class="flex flex-col md:flex-row items-center gap-10 mt-10">
+      <div class="md:w-1/2 text-slate-300 text-lg leading-relaxed">
+        <p>
+          I'm Vaibhav — a Business Analytics grad with an engineer’s logic and a creator’s curiosity. My world spins around AI, smart data, Python scripts, and every new gadget I can get my hands on.
+        </p>
+        <p class="mt-4">
+          From designing dashboards to deploying Kubernetes clusters in AI4EU, I thrive where problem-solving meets innovation. Tech wasn’t always my path — but once I discovered the thrill of building with code, I never looked back.
+        </p>
+        <p class="mt-4">
+          Now, I’m eager to bring that passion into a role where I can turn data into decisions — ideally in Business Analytics or Data Strategy. <strong>Actively seeking opportunities — let’s connect.</strong>
+        </p>
+        <div class="mt-6">
+          <a href="Vaibhav_Rana_Resume_2025.pdf" download
+            class="inline-flex items-center bg-cyan-400 text-black px-4 py-2 rounded-full transition duration-300 shadow-lg hover:bg-cyan-300 hover:scale-105 transform">
+            <i class="fas fa-file-alt mr-2"></i> Download CV
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="ai.jpeg" alt="Poster Presentation" class="rounded-lg shadow-lg border border-cyan-500 w-full max-w-sm object-cover transform transition-transform duration-500 hover:scale-105">
+      </div>
+    </div>
   </div>
 </section>
 
-    <section>
-  <h2>Key Skills</h2>
-  <div class="card">
-    <ul>
-      <li><strong>Data Analysis:</strong> SQL, Excel, Tableau, Power BI, Python</li>
-      <li><strong>AI & ML:</strong> Scikit‑learn, TensorFlow, Jupyter Notebooks</li>
-      <li><strong>Data Engineering & Automation:</strong> Docker, REST APIs, ETL workflows</li>
-      <li><strong>Business Intelligence:</strong> KPI modeling, dashboard design, storytelling</li>
-      <li><strong>DevOps & Collaboration:</strong> GitHub, CI/CD pipelines, agile coordination</li>
-    </ul>
+
+  <!-- Certifications -->
+<section id="certifications" class="py-20 px-6 bg-[#0a0d13]" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="section-title">Certifications</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      
+      <a href="https://coursera.org/verify/professional-cert/KA9437SQWMB3" target="_blank" class="flex items-center space-x-4 hover:bg-white/10 p-4 rounded-lg transition">
+        <img src="https://img.icons8.com/color/96/ibm.png" class="w-16 cert-img" alt="IBM Logo"/>
+        <div class="text-left">
+          <h3 class="font-bold text-cyan-300">IBM Data Science Professional Certificate</h3>
+          <p class="text-sm text-slate-400">Hands-on with Python, SQL, ML & real-world capstone.</p>
+        </div>
+      </a>
+
+      <a href="https://coursera.org/verify/professional-cert/PZM3SUJ3XNKD" target="_blank" class="flex items-center space-x-4 hover:bg-white/10 p-4 rounded-lg transition">
+        <img src="https://img.icons8.com/color/96/combo-chart--v1.png" class="w-16 cert-img" alt="BI Icon"/>
+        <div class="text-left">
+          <h3 class="font-bold text-cyan-300">IBM Business Intelligence Analyst Certificate</h3>
+          <p class="text-sm text-slate-400">BI tools, SQL, Tableau, Cognos, Excel & dashboards.</p>
+        </div>
+      </a>
+
+      <a href="https://coursera.org/verify/7M2V0KXPMSCR" target="_blank" class="flex items-center space-x-4 hover:bg-white/10 p-4 rounded-lg transition">
+        <img src="https://img.icons8.com/color/96/data-configuration.png" class="w-16 cert-img" alt="Data Analyst Icon"/>
+        <div class="text-left">
+          <h3 class="font-bold text-cyan-300">Excel Skills for Business: Essentials</h3>
+          <p class="text-sm text-slate-400">Foundations of Excel for analysis and business use.</p>
+        </div>
+      </a>
+
+      <a href="https://coursera.org/verify/1LZZ9LVSRKMT" target="_blank" class="flex items-center space-x-4 hover:bg-white/10 p-4 rounded-lg transition">
+        <img src="https://img.icons8.com/color/96/learning.png" class="w-16 cert-img" alt="Excel Icon"/>
+        <div class="text-left">
+          <h3 class="font-bold text-cyan-300">Excel Skills for Business: Intermediate I</h3>
+          <p class="text-sm text-slate-400">Intermediate Excel: formulas, logic, data structure.</p>
+        </div>
+      </a>
+
+    </div>
   </div>
 </section>
 
-    <section>
-      <h2>Certifications</h2>
-      <div class="cert-grid">
-        <div class="card">
-          <p><strong>IBM Business Intelligence Analyst</strong><br/>SQL, Tableau, Excel, Cognos<br/><a href="./Coursera_PZM3SUJ3XNKD.pdf">View Certificate</a></p>
-        </div>
-        <div class="card">
-          <p><strong>IBM Data Science</strong><br/>Python, ML, Data Analysis<br/><a href="./Coursera_KA9437SQWMB3.pdf">View Certificate</a></p>
-        </div>
-        <div class="card">
-          <p><strong>Excel Skills: Essentials</strong><br/>Formulas, Charts, Tables<br/><a href="./Coursera_7M2V0KXPMSCR.pdf">View Certificate</a></p>
-        </div>
-      </div>
-    </section>
 
-    <section>
-      <h2>Projects</h2>
-      <div class="card">
-        <p><strong>AI4EU — AI-Effect Orchestrator</strong><br/><em>BCP Project @ Maynooth University (2025)</em><br/>• Multi-container orchestration with Docker Compose<br/>• KPI dashboard alignment<br/>• Stakeholder collaboration<br/><a href="https://github.com/VaibhavTechie/ai4eu-orchestrator">View on GitHub</a></p>
+  <!-- Skills -->
+  <section id="skills" class="py-20 px-6 bg-[#0d1119]" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="section-title">Skills</h2>
+      <div class="flex flex-wrap justify-center">
+        <div class="skill-badge">Python</div>
+        <div class="skill-badge">Kafka</div>
+        <div class="skill-badge">Power BI</div>
+        <div class="skill-badge">SQL</div>
+        <div class="skill-badge">Flask</div>
+        <div class="skill-badge">Docker</div>
+        <div class="skill-badge">Tableau</div>
+        <div class="skill-badge">Kubernetes</div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-6 bg-[#0a0d13]" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="glass p-6">
+          <h3 class="text-2xl font-semibold text-cyan-300 mb-2">⚡ Kafka Energy AI Pipeline</h3>
+          <p class="text-slate-300 mb-4">Real‑time ML pipeline using Kafka, Flask & Sklearn.</p>
+          <div class="flex items-center gap-4">
+            <a href="https://github.com/AI4EU-Graphene/AI_Kafka_Final/blob/main/README.md" class="px-4 py-2 bg-cyan-400 text-black rounded hover:bg-cyan-300 transition text-base">Report</a>
+            <a href="https://github.com/AI4EU-Graphene/AI_Kafka_Final" class="px-4 py-2 border border-cyan-400 rounded hover:bg-cyan-400 hover:text-black transition text-base">GitHub</a>
+          </div>
+        </div>
+        <div class="glass p-6">
+          <h3 class="text-2xl font-semibold text-cyan-300 mb-2">🧠 AI4EU Platform Orchestration</h3>
+          <p class="text-slate-300 mb-4">Docker + gRPC orchestration on Kubernetes.</p>
+          <div class="flex items-center gap-4">
+            <a href="https://1drv.ms/p/c/e9d7d5e10f357eaf/EZRI1JiEe-FHsvsXJ69-7yABSVBUYRlpC7PwbLPStfFpkw?e=COq0dI" class="px-4 py-2 bg-cyan-400 text-black rounded hover:bg-cyan-300 transition text-base">Report</a>
+            <a href="https://github.com/AI4EU-Graphene" class="px-4 py-2 border border-cyan-400 rounded hover:bg-cyan-400 hover:text-black transition text-base">GitHub</a>
+          </div>
+        </div>
+        <div class="glass p-6">
+          <h3 class="text-2xl font-semibold text-cyan-300 mb-2">🚀 Falcon 9 Launch Prediction</h3>
+          <p class="text-slate-300 mb-4">Logistic regression on SpaceX data predicting mission success.</p>
+          <div class="flex items-center gap-4">
+            <a href="https://www.coursera.org/professional-certificates/ibm-data-science" class="px-4 py-2 bg-cyan-400 text-black rounded hover:bg-cyan-300 transition text-base">Coursera Professional Certification Course</a>
+          </div>
+        </div>
+        <div class="glass p-6">
+          <h3 class="text-2xl font-semibold text-cyan-300 mb-2">🔧 Digital Twin Simulation</h3>
+          <p class="text-slate-300 mb-4">Predictive load simulation for energy management.</p>
+          <div class="flex items-center gap-4">
+            <a href="#" class="px-4 py-2 bg-cyan-400 text-black rounded hover:bg-cyan-300 transition text-base">Part of GAWAR Construction Ltd Tenure *confidential</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="text-center py-6 bg-black/80 text-sm">
+  <p>Reach me: 
+    <span class="underline cursor-pointer" onclick="navigator.clipboard.writeText('vaibhav@wayfounder.work')">
+      vaibhav@wayfounder.work
+    </span>
+  </p>
+  <p class="mt-2">&copy; 2025 Vaibhav Rana — Powered by Google, grit, and Git</p>
+  <p class="mt-2 text-xs text-slate-500">
+    Logos and trademarks (e.g., IBM, Coursera, Icons8) are property of their respective owners and used here for educational and portfolio purposes.
+  </p>
+</footer>
+
+
+  <!-- Nav Dots -->
+  <div class="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
+    <a href="#hero" class="nav-dot" data-section="hero"></a>
+    <a href="#about" class="nav-dot" data-section="about"></a>
+    <a href="#certifications" class="nav-dot" data-section="certifications"></a>
+    <a href="#skills" class="nav-dot" data-section="skills"></a>
+    <a href="#projects" class="nav-dot" data-section="projects"></a>
   </div>
 
-  <footer>
-    &copy; 2025 Vaibhav Rana — Built with love and clean code.
-  </footer>
+  <script>
+    AOS.init({ duration: 1000, once: false });
+    tsParticles.load("tsparticles", {
+      background: { color: { value: "transparent" } },
+      fpsLimit: 60,
+      particles: {
+        number: { value: 70 },
+        size: { value: 1.5 },
+        color: { value: "#ffffff" },
+        opacity: { value: 0.25 },
+        move: { enable: true, speed: 0.6, out_mode: "out" },
+        links: { enable: true, distance: 120, color: "#00d1d1", opacity: 0.2, width: 0.5 }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "grab" }, resize: true },
+        modes: { grab: { distance: 140, links: { opacity: 0.6 } } }
+      },
+      detectRetina: true
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navDots = document.querySelectorAll('.nav-dot');
+    function activateDot(){
+      const scrollY = window.scrollY + window.innerHeight / 2;
+      sections.forEach(sec => {
+        const top = sec.offsetTop, h = sec.offsetHeight;
+        if(scrollY >= top && scrollY < top + h) {
+          navDots.forEach(dot => {
+            dot.classList.toggle('active', dot.dataset.section === sec.id);
+          });
+        }
+      });
+    }
+    window.addEventListener('scroll', activateDot);
+    window.addEventListener('load', activateDot);
+  </script>
+
 </body>
 </html>
